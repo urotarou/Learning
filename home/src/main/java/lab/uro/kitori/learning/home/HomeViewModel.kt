@@ -1,4 +1,4 @@
-package lab.uro.kitori.home
+package lab.uro.kitori.learning.home
 
 import androidx.lifecycle.ViewModel
 

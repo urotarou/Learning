@@ -21,9 +21,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import lab.uro.kitori.home.screen.HomeDummy1Screen
-import lab.uro.kitori.home.screen.HomeDummy2Screen
-import lab.uro.kitori.home.screen.HomeScreen
+import lab.uro.kitori.learning.home.screen.HomeDummy1Screen
+import lab.uro.kitori.learning.home.screen.HomeDummy2Screen
+import lab.uro.kitori.learning.home.screen.HomeScreen
 import lab.uro.kitori.learning.navigation.HomeBottomBarElement
 import lab.uro.kitori.learning.navigation.HomeDummy1BottomBarElement
 import lab.uro.kitori.learning.navigation.HomeDummy1Route

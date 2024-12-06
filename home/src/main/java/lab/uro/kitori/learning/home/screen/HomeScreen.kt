@@ -1,4 +1,4 @@
-package lab.uro.kitori.home.screen
+package lab.uro.kitori.learning.home.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

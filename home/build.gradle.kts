@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "lab.uro.kitori.home"
+    namespace = "lab.uro.kitori.learning.home"
     compileSdk = 35
 
     defaultConfig {
