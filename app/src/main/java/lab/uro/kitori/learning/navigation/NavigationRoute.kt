@@ -4,10 +4,11 @@ import kotlinx.serialization.Serializable
 
 sealed interface NavigationRoute
 
-// Home
 @Serializable
 data object HomeRoute : NavigationRoute
 
-// Menu
 @Serializable
-data object MenuRoute : NavigationRoute
+data object HomeDummy1Route : NavigationRoute
+
+@Serializable
+data object HomeDummy2Route : NavigationRoute

@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
@@ -13,7 +12,6 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -23,22 +21,28 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import lab.uro.kitori.home.screen.HomeDummy1Screen
+import lab.uro.kitori.home.screen.HomeDummy2Screen
 import lab.uro.kitori.home.screen.HomeScreen
 import lab.uro.kitori.learning.navigation.HomeBottomBarElement
+import lab.uro.kitori.learning.navigation.HomeDummy1BottomBarElement
+import lab.uro.kitori.learning.navigation.HomeDummy1Route
+import lab.uro.kitori.learning.navigation.HomeDummy2BottomBarElement
+import lab.uro.kitori.learning.navigation.HomeDummy2Route
 import lab.uro.kitori.learning.navigation.HomeRoute
-import lab.uro.kitori.learning.navigation.MenuBottomBarElement
-import lab.uro.kitori.learning.navigation.MenuRoute
 import lab.uro.kitori.learning.ui.theme.LearningTheme
 
 private val topLevelRoutes = listOf(
     HomeBottomBarElement,
-    MenuBottomBarElement,
+    HomeDummy1BottomBarElement,
+    HomeDummy2BottomBarElement,
 )
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContent {
             LearningTheme {
                 val navController: NavHostController = rememberNavController()
@@ -87,17 +91,11 @@ class MainActivity : ComponentActivity() {
                         composable<HomeRoute> {
                             HomeScreen()
                         }
-                        composable<MenuRoute> {
-                            Scaffold(modifier = Modifier.fillMaxSize()) {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .padding(it),
-                                    contentAlignment = Alignment.Center,
-                                ) {
-                                    Text(text = "menu")
-                                }
-                            }
+                        composable<HomeDummy1Route> {
+                            HomeDummy1Screen()
+                        }
+                        composable<HomeDummy2Route> {
+                            HomeDummy2Screen()
                         }
                     }
                 }
