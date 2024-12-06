@@ -23,6 +23,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import lab.uro.kitori.home.screen.HomeScreen
 import lab.uro.kitori.learning.navigation.HomeBottomBarElement
 import lab.uro.kitori.learning.navigation.HomeRoute
 import lab.uro.kitori.learning.navigation.MenuBottomBarElement
@@ -84,16 +85,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(innerPadding),
                     ) {
                         composable<HomeRoute> {
-                            Scaffold(modifier = Modifier.fillMaxSize()) {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxSize()
-                                        .padding(it),
-                                    contentAlignment = Alignment.Center,
-                                ) {
-                                    Text(text = "home")
-                                }
-                            }
+                            HomeScreen()
                         }
                         composable<MenuRoute> {
                             Scaffold(modifier = Modifier.fillMaxSize()) {
