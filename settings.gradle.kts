@@ -22,4 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "Learning"
 
 include(":app")
+
+include(":ui")
 include(":home")
